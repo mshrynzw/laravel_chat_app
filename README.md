@@ -3,6 +3,8 @@
 Laravelで作るリアルタイムチャットアプリケーションです。
 Laravelの学習を目的として、認証・CRUD・リアルタイム通信などを段階的に実装します。
 
+<img width="582" height="492" alt="image" src="https://github.com/user-attachments/assets/6ab91686-e0c3-43de-82ec-2a2759fa9107" />
+
 ---
 
 # 概要
