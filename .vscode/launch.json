@@ -1,0 +1,20 @@
+laravel_chat_app
+│
+├ app
+├ bootstrap
+├ config
+├ database
+├ public
+├ resources
+├ routes
+├ storage
+├ vendor
+│
+├ .cursor
+│   └ rules
+│       └ laravel.mdc
+│
+├ .vscode
+│   ├ settings.json
+│   ├ extensions.json
+│   └ launch.json

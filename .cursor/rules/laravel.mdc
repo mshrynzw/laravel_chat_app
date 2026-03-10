@@ -1,0 +1,37 @@
+# Laravel Development Rules
+
+## General
+- Follow Laravel 12 conventions
+- Use PHP 8.5 features when appropriate
+- Prefer Eloquent ORM over raw SQL
+- Use route model binding when possible
+
+## Controllers
+- Controllers should be thin
+- Business logic should be moved to services when it grows
+- Validate requests using FormRequest classes
+
+## Models
+- Use Eloquent relationships
+- Use fillable or guarded properties
+- Avoid putting heavy logic in models
+
+## Database
+- Use migrations for schema changes
+- Use foreign keys and indexes where needed
+- Prefer soft deletes for user-generated content
+
+## Views
+- Use Blade templating
+- Keep views simple
+- Move reusable components to Blade components
+
+## Security
+- Always use CSRF protection
+- Validate all incoming requests
+- Use Laravel authentication middleware
+
+## Chat App Specific
+- Messages belong to users
+- Messages should support text and file attachments
+- Chat should load the latest 50 messages initially
