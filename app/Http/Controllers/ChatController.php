@@ -41,4 +41,13 @@ class ChatController extends Controller
 
         return redirect('/');
     }
+
+    public function destroy($id)
+    {
+        $message = Message::findOrFail($id);
+
+        $message->delete();
+
+        return redirect('/');
+    }
 }

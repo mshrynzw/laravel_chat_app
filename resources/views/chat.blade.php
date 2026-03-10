@@ -42,6 +42,12 @@ margin-left:10px;
 font-size:12px;
 }
 
+.delete-btn{
+margin-left:5px;
+font-size:12px;
+color:red;
+}
+
 .chat-input{
 display:flex;
 border-top:1px solid #eee;
@@ -85,6 +91,13 @@ Laravel Chat
 <a class="edit-btn" href="/message/{{ $message->id }}/edit">
 編集
 </a>
+
+<form action="/message/{{ $message->id }}/delete" method="POST" style="display:inline;">
+@csrf
+<button class="delete-btn" type="submit">
+削除
+</button>
+</form>
 
 </div>
 
