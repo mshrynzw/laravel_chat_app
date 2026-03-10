@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
 <meta charset="UTF-8">
 <title>Laravel Chat</title>
@@ -38,6 +37,11 @@ padding:15px;
 margin-bottom:10px;
 }
 
+.edit-btn{
+margin-left:10px;
+font-size:12px;
+}
+
 .chat-input{
 display:flex;
 border-top:1px solid #eee;
@@ -69,27 +73,32 @@ cursor:pointer;
 Laravel Chat
 </div>
 
-<div class="chat-messages" id="messages">
+<div class="chat-messages">
 
 @foreach($messages as $message)
 
 <div class="message">
+
 <strong>User {{ $message->user_id }}:</strong>
 {{ $message->text }}
+
+<a class="edit-btn" href="/message/{{ $message->id }}/edit">
+編集
+</a>
+
 </div>
 
 @endforeach
 
 </div>
 
-<form action="/message" method="POST" class="chat-input" id="chatForm">
+<form action="/message" method="POST" class="chat-input">
 
 @csrf
 
 <input
 type="text"
 name="text"
-id="messageInput"
 placeholder="メッセージ入力"
 required
 >
@@ -102,23 +111,5 @@ required
 
 </div>
 
-<script>
-
-const messages = document.getElementById("messages");
-messages.scrollTop = messages.scrollHeight;
-
-const form = document.getElementById("chatForm");
-
-form.addEventListener("submit", function(){
-
-setTimeout(function(){
-document.getElementById("messageInput").value="";
-},100);
-
-});
-
-</script>
-
 </body>
-
 </html>
