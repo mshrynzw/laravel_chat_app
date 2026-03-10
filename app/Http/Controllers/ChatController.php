@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Message;
+use Illuminate\Support\Facades\Auth;
 
 class ChatController extends Controller
 {
+
     public function index()
     {
         $messages = Message::orderBy('created_at','asc')->get();
@@ -17,7 +19,7 @@ class ChatController extends Controller
     public function store(Request $request)
     {
         Message::create([
-            'user_id' => 1,
+            'user_id' => Auth::id(),
             'text' => $request->text
         ]);
 
@@ -50,4 +52,5 @@ class ChatController extends Controller
 
         return redirect('/');
     }
+
 }

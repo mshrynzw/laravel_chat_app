@@ -85,8 +85,10 @@ Laravel Chat
 
 <div class="message">
 
-<strong>User {{ $message->user_id }}:</strong>
-{{ $message->text }}
+    <strong>
+        {{ $message->user->name }}:
+        </strong>
+        {{ $message->text }}
 
 <a class="edit-btn" href="/message/{{ $message->id }}/edit">
 編集
