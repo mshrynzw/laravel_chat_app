@@ -957,6 +957,8 @@ PS D:\Code\laravel_chat_app> npm run dev
   ➜  APP_URL: http://localhost
 
 ```
+## Chat GPT
+https://chatgpt.com/share/69b0abec-f9d0-8009-9262-563cb0f60051
 
 # ライセンス
 
