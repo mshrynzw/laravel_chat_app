@@ -9,7 +9,7 @@ class ChatController extends Controller
 {
     public function index()
     {
-        $messages = Message::latest()->get();
+        $messages = Message::orderBy('created_at', 'asc')->get();
 
         return view('chat', compact('messages'));
     }
