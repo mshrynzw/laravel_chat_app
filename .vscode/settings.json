@@ -7,15 +7,15 @@
     "php.suggest.basic": false,
 
     "intelephense.environment.phpVersion": "8.5.0",
-
+    "intelephense.environment.includePaths": ["vendor/laravel/framework/src"],
     "intelephense.files.maxSize": 5000000,
 
     "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit"
+        "source.fixAll": "explicit"
     },
 
     "files.exclude": {
-      "**/vendor": true,
-      "**/node_modules": true
+        "**/vendor": true,
+        "**/node_modules": true
     }
-  }
+}
